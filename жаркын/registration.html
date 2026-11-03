@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Запись на тренировку по грэпплингу</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Запись на тренировку</h1>
+        <p>Заполните анкету на пробное занятие по грэпплингу</p>
+        <nav>
+            <a href="index.html">Вернуться на главную</a>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Ваши данные</h2>
+            <p>Поля можно заполнять и исправлять до отправки формы.</p>
+            <form id="registration-form">
+                <label for="last-name">Фамилия</label>
+                <input type="text" id="last-name" name="last-name" autocomplete="family-name" required>
+
+                <label for="first-name">Имя</label>
+                <input type="text" id="first-name" name="first-name" autocomplete="given-name" required>
+
+                <label for="birth-date">Дата рождения</label>
+                <input type="date" id="birth-date" name="birth-date" autocomplete="bday" required>
+
+                <label for="email">Электронная почта</label>
+                <input type="email" id="email" name="email" autocomplete="email" required>
+
+                <label for="phone">Номер телефона</label>
+                <input type="tel" id="phone" name="phone" autocomplete="tel" inputmode="numeric" maxlength="8" pattern="[0-9]{1,13}" required>
+                <small>Можно ввести не более 13 цифр.</small>
+                <label for="password">Пароль</label>
+                <input type="password" id="password" name="password" autocomplete="new-password" minlength="8" required>
+
+                <label for="repeat-password">Повторите пароль</label>
+                <input type="password" id="repeat-password" name="repeat-password" autocomplete="new-password" minlength="8" required>
+
+                <button type="submit">Записаться на тренировку</button>
+                <p id="form-message" role="status" aria-live="polite"></p>
+                <p class="form-note">Это учебный пример: данные не отправляются тренеру и не сохраняются.</p>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p><a href="index.html">Вернуться на сайт о грэпплинге</a></p>
+    </footer>
+</body>
+</html>
